@@ -1,0 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var btn = document.querySelector(".nav-toggle");
+  var nav = document.querySelector(".site-nav");
+  if (!btn || !nav) return;
+  btn.addEventListener("click", function () {
+    var open = nav.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", String(open));
+  });
+});
